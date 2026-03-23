@@ -1,0 +1,380 @@
+<!-- 
+<ul> abre lista
+<li> lista (bolinha)
+<ol> abre lista ordenada (coloca numeração, 1.,2.,3.,4....)
+<dl> lista por descrição (topicos)
+    <dt> abre topico
+        <dd> subtopico
+<details> tópico oculto
+    <summary>
+<img src="LINK" width="TAMANHO">> imagem e tamanho em % ou px
+<img src="nomedaimagem" width="TAMANHO">> imagem e tamanho em % ou px
+
+<a> link
+<p> texto
+<br> pula linha
+<type="A"> muda de numerico para alfabeto (diferencia maiuscula "A" e minuscula "a")
+<type="I"> numero romano (diferencia maiuscula "I" e minuscula "i")
+<href="SITE"> coloca o link do site (colocar https://) - abre mesma aba
+<a href="SITE" target="_blank"> - abre aba seperada
+
+
+<!-->
+<html>
+
+    <head>
+        <title>Mercado </title>
+    </head>
+
+    <body>
+        <h1>Lista de Produtos </h1>
+            <details>
+                <summary>Limpeza </summary>
+                    <details>
+                        <summary>Água Sanitária</summary>
+                            <img src="data:image/jpeg;base64,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"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Esponja</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLi3yajQTk1T2jwLKVORYk3JxOt10hBA0GRA&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Sabão em Pó </summary>
+                            <img src="https://tb0932.vtexassets.com/arquivos/ids/166652/Sabao-em-Po-Lavagem-Perfeita-56Kg-Omo-106067.png?v=638512914998100000"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Rodo de espuma</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjYM0B65Qs8SF6ab0ZuSZy-Gid5ABbzkyEcA&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Vassoura </summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3lBCwecyV_lQ8Dk0ILQtljuXhyKqmkP0hlw&s"
+                            width="10%">
+                    </details><br>
+                 </details>
+                <br><br>
+            <details>
+                <summary>Bebidas </summary>
+                    <details>
+                        <summary>Água</summary>
+                            <img src="https://mambodelivery.vtexassets.com/arquivos/ids/184965-800-450?v=637884009070200000&width=800&height=450&aspect=true"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Coca Cola</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl3gfs57Ru0rqWa6Vr5_JbXSkp7M2wGZu3mQ&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Cerveja </summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREVnlXejRgOYVzXLJGp3jFP_oFHzMH7D1Tjw&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Vodka</summary>
+                            <img src="https://images.tcdn.com.br/img/img_prod/1186490/vodka_absolut_tradicional_1lt_863_1_ef04271f12c5274f8042fab034b7e4ae.jpg"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Tonica </summary>
+                            <img src="https://prezunic.vtexassets.com/arquivos/ids/191863-800-auto?v=638369662862570000&width=800&height=auto&aspect=true"
+                            width="10%">
+                    </details><br>
+            </details>
+<br><br>
+            <details>
+                <summary>Acougue </summary>
+                    <details>
+                        <summary>Picanha</summary>
+                            <img src="https://coopsp.vtexassets.com/arquivos/ids/237134-800-auto?v=638422381576730000&width=800&height=auto&aspect=true"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Costela Minga</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzlFbpaTr_nOzNF3bBIuDSneipyYHE4drjEA&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Fraldinha </summary>
+                            <img src="https://centralmaxsupermercados.com.br/imagens_site/575.jpg"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Costelinha Suina</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSmH9qOYytXSzhhSHsoL63IpVuV0yAhBoSMw&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Peito de frango </summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFvYhoVDcVlwjVY0m2XgjyJCdaSJy1JB1dIQ&s"
+                            width="10%">
+                    </details><br>
+            </details>
+<br><br>
+            <details>
+                <summary>Hortfrut </summary>
+                    <details>
+                        <summary>Banana</summary>
+                            <img src="https://io.convertiez.com.br/m/superpaguemenos/shop/products/images/13931/medium/banana-nanica-kg_67472.png"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Maca</summary>
+                            <img src="https://io.convertiez.com.br/m/superpaguemenos/shop/products/images/16473/small/maca-vermelha-gala-kg_11276.jpg"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Laranja </summary>
+                            <img src="https://io.convertiez.com.br/m/superpaguemenos/shop/products/images/16294/small/laranja-pera-kg_73458.jpg"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Limao</summary>
+                            <img src="https://io.convertiez.com.br/m/superpaguemenos/shop/products/images/24057/medium/limao-taiti-kg_49132.png"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Pessego </summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV7aONfdto2QEtiDHJ4tmIgsvYZ4Hp48z2pg&s"
+                            width="10%">
+                    </details><br>
+            </details>
+<br><br>
+            <details>
+                <summary>Higiene Pessoal</summary>
+                    <details>
+                        <summary>Escova de dente</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpy1p9MCAnwrOmPod6xLocIJLOj7PKDpeKRg&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Pasta de dente</summary>
+                            <img src="https://http2.mlstatic.com/D_NQ_NP_901286-MLB72006119407_092023-O.webp"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Sabonete </summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlzmevMFdkOmRDAduqtoZ_gusnZE9pDnadA&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Cotonete</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuIWB6EmPEGUjYKafauYwQJmxYgN5AUHE61A&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Aparelho de Barbear </summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ93DWl7IRZNwjH_qLGiBPatzz-eLn79EOZQA&s"
+                            width="10%">
+                    </details>
+            </details><br>
+<br><br>
+            <details>
+                <summary>Panificadora</summary>
+                    <details>
+                        <summary>Pão Frances</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmgT9ch3NczX8rvoZTveQBaagIV6pXSEDV-A&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Bolo de Chocolate</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPTIWIMwb8eYav_qsv_1elenD6aaXozde_3A&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Brigadeiro</summary>
+                            <img src="https://rocky-v3-1fa5fca18f3119c0333e35a28671df45.s3.sa-east-1.amazonaws.com/product_images/a4510a4bb3350a6b13545dd9ded5da43.webp"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Sanduiche Natural</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSdHnwttr0WjKzDWbhGHnh3p9XP3NlJ78xVA&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Coxinha de Frango</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbbAyLM5azmLC1xFW9k2enW3smbnchnalK5g&s"
+                            width="10%">
+                    </details><br>
+            </details>
+<br><br>
+             <details>
+                <summary>Eletro</summary>
+                    <details>
+                        <summary>Televisão</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSha7JOYN-MZvv7i_hnIbJ0IB1MUcAnxaiXdw&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Secador de Cabelo</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe0fiPjIveFlpxwDSYqzrQ9bkdM7QHw_ce6w&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Aspirador de Pó</summary>
+                            <img src="https://d296pbmv9m7g8v.cloudfront.net/Custom/Content/Products/99/27/992728_aspirador-de-po-e-agua-electrolux-gt30n-com-filtro-1300w-10003493_m120_638763545253177563.webp"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Geladeira</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2LtRG_0Ox275F0bwDEkyG49LfVCEIo9klcQ&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Fogão</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ7Rxe1KpW97_STHGR9Coe2Hme9jTnAkZ4wQ&s"
+                            width="10%">
+                    </details><br>
+            </details>           
+<br><br>
+              <details>
+                <summary>Doces</summary>
+                    <details>
+                        <summary>Chocolate Branco</summary>
+                            <img src="https://ibassets.com.br/ib.item.image.large/l-f02698b7fc854ddf865fd70a4bfcda11.jpeg"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Chocolate Preto</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJgRsmVx3w78Gi4pUmtxpuT1wXC-m6T6zWeA&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Goma de mascar</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-6-S4uDqIdfzdNZetDMpoRyaKgKA9GseqVA&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Ovo de Pascoa</summary>
+                            <img src="https://americanas.vtexassets.com/arquivos/ids/37249396-768-auto/7898024396567.webp?v=639052292220000000&quality=9"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Caixa de Chocolate</summary>
+                            <img src="https://static.wixstatic.com/media/bc10b0_92e62bd311da43998738937516e92695~mv2.png/v1/fill/w_480,h_534,al_c,lg_1,q_85,enc_avif,quality_auto/bc10b0_92e62bd311da43998738937516e92695~mv2.png"
+                            width="10%">
+                    </details><br>
+            </details>               
+<br><br>
+              <details>
+                <summary>Cereais</summary>
+                    <details>
+                        <summary>Arroz</summary>
+                            <img src="https://cdn-cosmos.bluesoft.com.br/products/7898022800011"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Feijão</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2pYAxNu5zJy4AjkE4d3zq5S16bY8qswR_Aw&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Farinha de Trigo</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX5pc6rTHqc7MeJAUOkAy4rQrntv-uUkZePA&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Aveia</summary>
+                            <img src="https://phygital-files.mercafacil.com/primo/uploads/produto/aveia_em_flocos_finos_nestle_170g_957cb6a9-a862-4bad-acc5-a0b3518036ab.jpg"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Granola</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpj2LNA0E7ORtCBDnldyE3hkYSw-vk8CyTTQ&s"
+                            width="10%">
+                    </details><br>
+            </details>
+ <br><br>          
+              <details>
+                <summary>Temperos</summary>
+                    <details>
+                        <summary>Sal</summary>
+                            <img src="https://d21wiczbqxib04.cloudfront.net/0N2ztL0Lup3pQ6g26npYkzQrmHI=/1600x0/smart/https://produtos-osuper.s3.sa-east-1.amazonaws.com/6371.jpg"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Acucar</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKjko-UFLK7Cd13E2QPHQJeWf9gieHpXc5HA&s"
+                            width="10%">
+                    </details>
+<br>
+                     <details>
+                        <summary>Pimenta calabresa</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe962fwwAm1EfVGjlD8naWw-bEYpooyQZ2ww&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Paprica defumada</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ13t3tVYqrk9wgkggPqapKzFPEzRUD1qLdQQ&s"
+                            width="10%">
+                    </details>
+<br>
+                    <details>
+                        <summary>Sal temperado</summary>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMidzB1vyMIHYFauF0pVeOjPSBAQ2ckviAXQ&s"
+                            width="10%">
+                    </details>
+            </details>    
+            
+
+
+
+            </dl>
+          
+
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+</html>
