@@ -1,0 +1,131 @@
+.grupo {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.classific {
+    border: 5px solid rgb(0, 155, 58);
+    border-collapse: collapse;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100%;
+    min-width: 800px;
+}
+
+.titulogrupo {
+    background-color: rgb(0, 39, 118);
+    color: white;
+    font-weight: bold;
+}
+
+.subtitulogrupo {
+    background-color: rgb(0, 155, 58);
+    font-weight: bold;
+    color: rgb(255, 223, 0);
+    text-align: center;
+}
+
+.times {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.times img {
+    width: 20px;
+    height: auto;
+}
+
+.jogos {
+    border: 5px solid rgb(0, 155, 58);
+    border-collapse: collapse;
+    border-radius: 8px;
+    padding: 15px;
+    width: 60%;
+    align-items: center;
+    font-weight: bold;
+    min-width: 300px;
+}
+
+.titulorodada {
+    background-color: rgb(0, 39, 118);
+    color: white;
+    font-weight: bold;
+}
+
+.subtitulorodada {
+    background-color: rgb(0, 155, 58);
+    color: rgb(255, 223, 0);
+    font-weight: bold;
+}
+
+.timesjogos {
+    text-align: center;
+}
+
+.timesjogos img {
+    width: 20px;
+    height: auto;
+}
+
+.tablejogos {
+    text-align: center;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    table-layout: auto;
+}
+
+.titulo {
+    text-align: center;
+    font-family: Impact, sans-serif;
+    background: linear-gradient(90deg,#ffdd02, #009739 , #002776);
+    width: 100%;
+    font-size: 80px;
+    color: white;
+}
+
+.titulosec {
+    text-align: center;
+    font-family: Impact, sans-serif;
+    background: linear-gradient(90deg, #002776, #009739, #ffdd02);
+    width: 100%;
+    font-size: 40px;
+    color: white;
+}
+
+html{
+    background-color: rgba(188, 194, 194, 0.459);
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 768px) {
+
+.grupo{
+flex-direction: column;
+overflow: scroll;
+}
+
+.jogos{
+width: 100%;
+}
+
+.classific{
+width: 100%;
+}
+
+.titulo{
+font-size: 40px;
+}
+
+.titulosec{
+font-size: 25px;
+}
+
+}
